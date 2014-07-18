@@ -14,8 +14,15 @@ public class CentroCosto {
     private int id;
     @DatabaseField(columnName = "empresa_id")
     private int empresaId;
-    
-    public CentroCosto() {}
+    @DatabaseField
+    private String mensaje;
+    @DatabaseField
+    private Double servicio;
+    @DatabaseField(columnName = "tipocambio")
+    private Double tipoCambio;
+
+    public CentroCosto() {
+    }
 
     public int getId() {
         return id;
@@ -25,4 +32,16 @@ public class CentroCosto {
         return empresaId;
     }
 
+    public String getMensaje() {
+        return mensaje;
+    }
+
+    public Double getServicio() {
+        return servicio;
+    }
+
+    public Double getTipoCambio() {
+        return tipoCambio;
+    }
+    
 }

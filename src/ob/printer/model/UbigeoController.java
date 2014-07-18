@@ -4,7 +4,7 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import java.sql.SQLException;
 import java.util.List;
-import ob.priner.util.Conn;
+import ob.printer.util.Conn;
 
 /**
  *
@@ -13,19 +13,22 @@ import ob.priner.util.Conn;
 public class UbigeoController {
 
     private final Dao<Ubigeo, Integer> dao;
-    private final List<Ubigeo> lstUbigeo;
+    //private final List<Ubigeo> lstUbigeo;
     
     public UbigeoController() throws SQLException {
-        dao = DaoManager.createDao(Conn.ConnectionSource, Ubigeo.class);
-        lstUbigeo = dao.queryForAll();
+        dao = DaoManager.createDao(Conn.getConnectionSource(), Ubigeo.class);
+        //lstUbigeo = dao.queryForAll();
     }
 
-    public Ubigeo getById(int id) throws SQLException {
+    /*public Ubigeo getById(int id) throws SQLException {
         for (Ubigeo ubigeo : lstUbigeo) {
             if(ubigeo.getId()==id) {
                 return ubigeo;
             }
         }
         return null;
+    }*/
+    public Ubigeo getById(int id) throws SQLException {
+        return dao.queryForId(id);
     }
 }

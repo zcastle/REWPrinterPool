@@ -22,16 +22,17 @@ public class Caja {
     private String impresoraBoleta;
     @DatabaseField(columnName = "impresora_f")
     private String impresoraFactura;
-    @DatabaseField(columnName = "tipocambio")
-    private Double tipoCambio;
-    @DatabaseField
-    private Double servicio;
+    @DatabaseField(columnName = "impresora_x")
+    private String impresoraCierreParcial;
+    @DatabaseField(columnName = "impresora_z")
+    private String impresoraCierreTotal;
     @DatabaseField
     private int dia;
     @DatabaseField(columnName = "centrocosto_id")
     private int centroCostoId;
     @DatabaseField(columnName = "seriecaja")
     private String serieCaja;
+    @DatabaseField
     private String autorizacion;
     
     public Caja() {}
@@ -64,14 +65,14 @@ public class Caja {
         return impresoraFactura;
     }
 
-    public Double getTipoCambio() {
-        return tipoCambio;
+    public String getImpresoraCierreParcial() {
+        return impresoraCierreParcial;
     }
 
-    public Double getServicio() {
-        return servicio;
+    public String getImpresoraCierreTotal() {
+        return impresoraCierreTotal;
     }
-
+    
     public int getDia() {
         return dia;
     }

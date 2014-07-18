@@ -1,54 +1,54 @@
 package ob.printer;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-import java.util.Locale;
-
 /**
  *
  * @author Pilar
  */
 public class Detalle {
     
-    private Double cantidad;
+    private int atencionId;
+    private int cantidad;
     private String producto;
     private Double unitario;
+    private String mensaje;
 
     public Detalle() {
     }
 
-    public Detalle(Double cantidad, String producto, Double unitario) {
+    public Detalle(int cantidad, String producto, Double unitario) {
         this.cantidad = cantidad;
         this.producto = producto;
         this.unitario = unitario;
     }
+    
+    public Detalle(int cantidad, int atencionId, String producto, String mensaje) {
+        this.cantidad = cantidad;
+        this.atencionId = atencionId;
+        this.producto = producto;
+        this.mensaje = mensaje;
+    }
 
-    public Double getCantidad() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(Double cantidad) {
-        this.cantidad = cantidad;
+    public int getAtencionId() {
+        return atencionId;
     }
 
     public String getProducto() {
         return producto;
     }
 
-    public void setProducto(String producto) {
-        this.producto = producto;
-    }
-
     public Double getUnitario() {
         return unitario;
     }
 
-    public void setUnitario(Double unitario) {
-        this.unitario = unitario;
+    public String getMensaje() {
+        return mensaje;
     }
     
     public Double getTotal() {
         return cantidad*unitario;
     }
-
 }

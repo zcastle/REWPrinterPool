@@ -3,7 +3,7 @@ package ob.printer.model;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import java.sql.SQLException;
-import ob.priner.util.Conn;
+import ob.printer.util.Conn;
 
 /**
  *
@@ -14,11 +14,10 @@ public class EmpresaController {
     private final Dao<Empresa, Integer> dao;
 
     public EmpresaController() throws SQLException {
-        dao = DaoManager.createDao(Conn.ConnectionSource, Empresa.class);
+        dao = DaoManager.createDao(Conn.getConnectionSource(), Empresa.class);
     }
 
     public Empresa getById(int id) throws SQLException {
-        CentroCosto centroCosto = new CentroCostoController().getById(id);
-        return dao.queryForId(centroCosto.getEmpresaId());
+        return dao.queryForId(id);
     }
 }
