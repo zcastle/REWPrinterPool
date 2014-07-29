@@ -10,7 +10,7 @@ import ob.printer.Cabecera;
 import ob.printer.Detalle;
 import ob.printer.model.Impuesto;
 import ob.printer.util.App;
-import ob.printer.util.REWPrinter;
+import ob.lib.ESCPOSPrinter;
 import ob.printer.util.Util;
 
 /**
@@ -29,9 +29,9 @@ public class Factura extends Ticket implements TicketInterface {
     @Override
     public boolean print() {
         try {
-            REWPrinter print = new REWPrinter(printer);
+            ESCPOSPrinter print = new ESCPOSPrinter(printer);
 
-            print.setFont(REWPrinter.FONT_B);
+            print.setFont(ESCPOSPrinter.FONT_B);
             print.setCenter(true);
             if (!cabecera.getNombreComercial().isEmpty()) {
                 print.println(cabecera.getNombreComercial());

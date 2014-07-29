@@ -58,9 +58,15 @@ public class Llamada {
                 break;
             case "cierre":
                 System.out.println("CIERRE");
-                System.out.println(modulo[2]);
-                System.out.println(modulo[3]);
-                success = new Imprimir().cierre(Integer.parseInt(modulo[2]), Integer.parseInt(modulo[3]));
+                if(modulo.length==3) {
+                    System.out.println(modulo[2]);
+                    success = new Imprimir().cierre(Integer.parseInt(modulo[2]), 0);
+                } else if(modulo.length==4) {
+                    System.out.println(modulo[2]);
+                    System.out.println(modulo[3]);
+                    success = new Imprimir().cierre(Integer.parseInt(modulo[2]), Integer.parseInt(modulo[3]));
+                }
+                
                 break;
         }
         

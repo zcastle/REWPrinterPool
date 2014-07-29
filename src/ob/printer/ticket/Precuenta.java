@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 import ob.printer.Cabecera;
 import ob.printer.Detalle;
-import ob.printer.util.REWPrinter;
+import ob.lib.ESCPOSPrinter;
 import ob.printer.util.Util;
 
 /**
@@ -26,16 +26,16 @@ public class Precuenta extends Ticket implements TicketInterface {
     @Override
     public boolean print() {
         try {
-            REWPrinter print = new REWPrinter(printer);
+            ESCPOSPrinter print = new ESCPOSPrinter(printer);
             
-            print.setFont(REWPrinter.FONT_B);
+            print.setFont(ESCPOSPrinter.FONT_B);
             print.setCenter(true);
             print.println("----------------------------------------");
             if(Precuenta.CABECERA) {
                 print.setDoubleHeight(true);
                 print.println("P R E C U E N T A");
                 print.setDoubleHeight(false);
-                print.setFont(REWPrinter.FONT_B);
+                print.setFont(ESCPOSPrinter.FONT_B);
                 print.println("Comprobante no autorizado");
             } else {
                 if (!cabecera.getNombreComercial().isEmpty()) {
@@ -69,7 +69,7 @@ public class Precuenta extends Ticket implements TicketInterface {
             print.print("TOTAL                 S/.     ");
             print.println(Util.right(Util.format(total), 10));
             print.setDoubleHeight(false);
-            print.setFont(REWPrinter.FONT_B);
+            print.setFont(ESCPOSPrinter.FONT_B);
             print.feed(1);
             print.println("RUC:------------------------------------");
             print.feed(1);

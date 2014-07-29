@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import ob.printer.Cabecera;
 import ob.printer.Detalle;
-import ob.printer.util.REWPrinter;
+import ob.lib.ESCPOSPrinter;
 import ob.printer.util.Util;
 
 /**
@@ -23,15 +23,15 @@ public class Liberar extends Ticket implements TicketInterface {
     @Override
     public boolean print() {
         try {
-            REWPrinter print = new REWPrinter(printer);
+            ESCPOSPrinter print = new ESCPOSPrinter(printer);
             
-            print.setFont(REWPrinter.FONT_B);
+            print.setFont(ESCPOSPrinter.FONT_B);
             print.println("----------------------------------------");
             print.setCenter(true);
             print.setDoubleHeight(true);
             print.println("M E S A  L I B E R A D A");
             print.setDoubleHeight(false);
-            print.setFont(REWPrinter.FONT_B);
+            print.setFont(ESCPOSPrinter.FONT_B);
             print.setCenter(false);
             print.println("----------------------------------------");
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");

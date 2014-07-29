@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 import ob.printer.Cabecera;
 import ob.printer.Detalle;
-import ob.printer.util.REWPrinter;
+import ob.lib.ESCPOSPrinter;
 import ob.printer.util.Util;
 
 /**
@@ -29,9 +29,9 @@ public class Pedido extends Ticket implements TicketInterface {
     @Override
     public boolean print() {
         try {
-            REWPrinter print = new REWPrinter(printer);
+            ESCPOSPrinter print = new ESCPOSPrinter(printer);
             
-            print.setFont(REWPrinter.FONT_B);
+            print.setFont(ESCPOSPrinter.FONT_B);
             print.println("----------------------------------------");
             print.setCenter(true);
             print.setDoubleHeight(true);
@@ -42,7 +42,7 @@ public class Pedido extends Ticket implements TicketInterface {
             }
             print.setDoubleHeight(false);
             print.setCenter(false);
-            print.setFont(REWPrinter.FONT_B);
+            print.setFont(ESCPOSPrinter.FONT_B);
             print.println("----------------------------------------");
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
             Date date = cabecera.getFechaHora();

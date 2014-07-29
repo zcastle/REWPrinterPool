@@ -1,38 +1,30 @@
-jul 17, 2014 4:06:02 PM ob.printer.util.Util info
+jul 29, 2014 3:13:32 AM ob.printer.util.Util warning
+Advertencia: config.properties (No existe el archivo o el directorio)
+jul 29, 2014 3:13:51 AM ob.printer.util.Util info
 Información: Conexion a la Base de Datos -> Success
-jul 17, 2014 4:06:02 PM ob.printer.util.Util info
+jul 29, 2014 3:13:51 AM ob.printer.util.Util info
 Información: Arrancamos nuestro servidor
-jul 17, 2014 4:06:02 PM ob.printer.util.Util info
+jul 29, 2014 3:13:51 AM ob.printer.util.Util info
 Información: Quedamos a la espera de conexion
-jul 17, 2014 4:06:34 PM ob.printer.util.Util info
-Información: Conexion a la Base de Datos -> Success
-jul 17, 2014 4:06:34 PM ob.printer.util.Util info
-Información: Arrancamos nuestro servidor
-jul 17, 2014 4:06:34 PM ob.printer.util.Util info
-Información: Quedamos a la espera de conexion
-jul 17, 2014 4:06:49 PM ob.printer.util.Util info
+jul 29, 2014 3:13:55 AM ob.printer.util.Util info
 Información: Procesamos conexion
-jul 17, 2014 4:06:49 PM ob.printer.util.Util info
-Información: Llamando /print/cierre/2/9
-jul 17, 2014 4:06:49 PM ob.printer.util.Util info
-Información: Print CIERRE OK [/home/jc/x]
-jul 17, 2014 4:06:49 PM ob.printer.util.Util info
+jul 29, 2014 3:13:55 AM ob.printer.util.Util info
+Información: Llamando /print/cierre/2
+jul 29, 2014 3:13:55 AM ob.printer.util.Util info
+Información: Print CIERRE OK [/home/jc/z]
+jul 29, 2014 3:13:55 AM ob.printer.util.Util info
 Información: No encuentro el fichero Socket closed
-jul 17, 2014 4:06:49 PM ob.printer.util.Util info
+jul 29, 2014 3:13:55 AM ob.printer.util.Util info
 Información: Hemos terminado
-jul 17, 2014 10:35:37 PM ob.printer.util.Util info
-Información: Conexion a la Base de Datos -> Success
-jul 17, 2014 10:35:37 PM ob.printer.util.Util info
-Información: Arrancamos nuestro servidor
-jul 17, 2014 10:35:37 PM ob.printer.util.Util info
-Información: Quedamos a la espera de conexion
-jul 17, 2014 10:35:40 PM ob.printer.util.Util info
+jul 29, 2014 3:13:55 AM ob.printer.util.Util info
 Información: Procesamos conexion
-jul 17, 2014 10:35:40 PM ob.printer.util.Util info
-Información: Llamando /print/precuenta/2/6
-jul 17, 2014 10:35:40 PM ob.printer.util.Util info
-Información: Print Precuenta OK [/home/jc/precuenta]
-jul 17, 2014 10:35:40 PM ob.printer.util.Util info
+jul 29, 2014 3:14:14 AM ob.printer.util.Util info
+Información: Procesamos conexion
+jul 29, 2014 3:14:14 AM ob.printer.util.Util info
+Información: Llamando /print/cierre/2
+jul 29, 2014 3:14:15 AM ob.printer.util.Util info
+Información: Print CIERRE OK [/home/jc/z]
+jul 29, 2014 3:14:15 AM ob.printer.util.Util info
 Información: No encuentro el fichero Socket closed
-jul 17, 2014 10:35:40 PM ob.printer.util.Util info
+jul 29, 2014 3:14:15 AM ob.printer.util.Util info
 Información: Hemos terminado

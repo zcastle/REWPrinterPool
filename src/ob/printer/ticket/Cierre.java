@@ -11,7 +11,7 @@ import ob.printer.Detalle;
 import ob.printer.model.Impuesto;
 import ob.printer.model.Pago;
 import ob.printer.model.Venta;
-import ob.printer.util.REWPrinter;
+import ob.lib.ESCPOSPrinter;
 import ob.printer.util.Util;
 
 /**
@@ -27,9 +27,9 @@ public class Cierre extends Ticket implements TicketInterface {
     @Override
     public boolean print() {
         try {
-            REWPrinter print = new REWPrinter(printer);
+            ESCPOSPrinter print = new ESCPOSPrinter(printer);
 
-            print.setFont(REWPrinter.FONT_B);
+            print.setFont(ESCPOSPrinter.FONT_B);
             print.setCenter(true);
             print.println("----------------------------------------");
 
