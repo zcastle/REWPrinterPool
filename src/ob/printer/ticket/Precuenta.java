@@ -16,9 +16,9 @@ import ob.printer.util.Util;
  * @author jc
  */
 public class Precuenta extends Ticket implements TicketInterface {
-    
+
     public static boolean CABECERA;
-    
+
     public Precuenta(String printer, Cabecera cabecera, List<Detalle> detalle) {
         super(printer, cabecera, detalle);
     }
@@ -27,11 +27,11 @@ public class Precuenta extends Ticket implements TicketInterface {
     public boolean print() {
         try {
             ESCPOSPrinter print = new ESCPOSPrinter(printer);
-            
+
             print.setFont(ESCPOSPrinter.FONT_B);
             print.setCenter(true);
             print.println("----------------------------------------");
-            if(Precuenta.CABECERA) {
+            if (Precuenta.CABECERA) {
                 print.setDoubleHeight(true);
                 print.println("P R E C U E N T A");
                 print.setDoubleHeight(false);
@@ -41,7 +41,7 @@ public class Precuenta extends Ticket implements TicketInterface {
                 if (!cabecera.getNombreComercial().isEmpty()) {
                     print.println(cabecera.getNombreComercial());
                 }
-                print.println(cabecera.getRazonSocial()+" - "+cabecera.getRuc());
+                print.println(cabecera.getRazonSocial() + " - " + cabecera.getRuc());
                 print.println(cabecera.getDireccion());
                 print.println("TLF: ".concat(cabecera.getTelefono()));
             }
@@ -84,11 +84,11 @@ public class Precuenta extends Ticket implements TicketInterface {
             return print.send();
         } catch (UnknownHostException ex) {
             Util.info(ex.getMessage());
-            Util.info("No se pudo imprimir en: "+printer);
+            Util.info("No se pudo imprimir en: " + printer);
             return false;
         } catch (IOException ex) {
             Util.info(ex.getMessage());
-            Util.info("No se pudo imprimir en: "+printer);
+            Util.info("No se pudo imprimir en: " + printer);
             return false;
         }
     }

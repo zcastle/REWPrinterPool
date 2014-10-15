@@ -6,6 +6,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import ob.printer.Cabecera;
 import ob.printer.Detalle;
 import ob.printer.model.Impuesto;
@@ -40,7 +42,7 @@ public class Cierre extends Ticket implements TicketInterface {
             print.println(cabecera.getDireccion());
             print.println("TLF: ".concat(cabecera.getTelefono()));
             print.println("----------------------------------------");
-            if(cabecera.getCajero().equals("0")){
+            if (cabecera.getCajero().equals("0")) {
                 print.println("CIERRE TOTAL");
             } else {
                 print.println("CIERRE PARCIAL");
@@ -51,7 +53,7 @@ public class Cierre extends Ticket implements TicketInterface {
             Date date = cabecera.getFechaHora();
             print.println("DIA TRABAJO       : ".concat(cabecera.getDia() + ""));
             print.println("FECHA IMPRESION   : ".concat(dateFormat.format(date)));
-            if(!cabecera.getCajero().equals("0")){
+            if (!cabecera.getCajero().equals("0")) {
                 print.println("CAJERO            : ".concat(cabecera.getCajero()));
             }
 
@@ -168,13 +170,13 @@ public class Cierre extends Ticket implements TicketInterface {
             print.println("TIPO PAGO            MONTO");
             total = 0.0;
             for (Pago pago : cabecera.getPagos()) {
-                print.print(Util.left(pago.getTipoPago(), 17)+" : ");
+                print.print(Util.left(pago.getTipoPago(), 17) + " : ");
                 print.println(Util.right(Util.format(pago.getValorPago()), 10));
                 total += pago.getValorPago();
             }
             print.println("----------------------------------------");
             print.println("VENTAS TOTAL      : ".concat(Util.right(Util.format(total), 10)));
-            if(!cabecera.getCajero().equals("0")) {
+            if (!cabecera.getCajero().equals("0")) {
                 print.feed();
                 print.setCenter(true);
                 print.println("REPORTE DE PRODUCTOS");

@@ -6,7 +6,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import ob.printer.Cabecera;
-import ob.printer.Detalle;
 import ob.lib.ESCPOSPrinter;
 import ob.printer.util.Util;
 

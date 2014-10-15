@@ -6,6 +6,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import ob.printer.Cabecera;
 import ob.printer.Detalle;
 import ob.printer.model.Impuesto;
